@@ -1,9 +1,7 @@
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+/* Apply Poppins font */
  body {
   font-family: 'Poppins', sans-serif;
-}
-
-  background: #faf6ff;
+background: #faf6ff;
   text-align: center;
   padding: 50px;
   color: #333;
@@ -18,13 +16,16 @@ header {
 }
 
 header h1{
-  color: #6a0dad;
+    margin: 0;
+  font-size: 2.5rem;
 }
 
 
 header p{
   font-size: 18px;
+ margin-top: 10px;
 }
+
 
 /* Navigation inside header */
 nav {
@@ -34,7 +35,7 @@ nav {
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 20px 0 0 0;
+   margin: 0;;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -50,7 +51,6 @@ nav ul li a {
   font-weight: bold;
   font-size: 18px;
   transition: color 0.3s ease, transform 0.2s ease;
-};
 }
 
 nav ul li a:hover {
@@ -76,9 +76,16 @@ nav ul li a:hover {
   margin-bottom: 30px;
 }
 
-.hero-btn {
+.hero-btn {display: inline-block;
+  padding: 12px 24px;
+  background-color: white;
+  color: #0077b6;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
+ 
 .hero-btn:hover {
   background-color: #023e8a;
   color: white;
