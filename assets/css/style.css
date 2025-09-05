@@ -37,6 +37,40 @@ nav ul li a {
   font-weight: bold;
   font-size: 18px;
 }
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #0077b6, #90e0ef);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: white;
+  color: #0077b6;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #023e8a;
+  color: white;
+}
+
 
 nav ul li a:hover {
   text-decoration: underline;
