@@ -203,3 +203,10 @@ nav ul li a:hover {
 .main-nav a:hover {
   text-decoration: underline;
 }
+body {
+  ...
+}
+
+header {
+  ...
+}
