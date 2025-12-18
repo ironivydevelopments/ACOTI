@@ -92,3 +92,42 @@ nav ul li a:hover {
   color: #fff;
   transform: translateY(-3px);
 }
+/* =========================
+   SITE HEADER / NAVIGATION
+========================= */
+
+#site-header {
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Branding / Title */
+.site-branding h1 {
+  margin: 0 0 1rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Navigation */
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #111;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
