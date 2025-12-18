@@ -1,48 +1,59 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anissa's Corner of the Internet</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anissa’s Corner of the Internet</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-
-<!-- Font Awesome (for search icon) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>✨ Welcome to Anissa's Corner of the Internet ✨</h1>
-    <p>Your hub for lifestyle, business, and inspiration 🌱</p>
-  <!--Navigation -->
- <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="videos.html">Videos</a></li>
-    <li><a href="Blog.html">Blog</a></li>
-    <li><a href="CornerStore.html">CornerStore</a></li>
-    <li><a href="ContactUs.html">ContactUs</a></li>
-    <li><a href="#"><i class="fas fa-search"></i></a></li>
-  </ul>
-</nav>
-
+  <!-- HERO -->
+  <header id="hero">
+    <h1>Anissa’s Corner of the Internet</h1>
+    <p class="tagline">
+      Thoughts, videos, ideas, and creative drops — all in one corner.
+    </p>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to ACOTI</h1>
-      <p>Anissa’s Corner of the Internet – Where creativity,Meets Community.</p>
-      <a href="#about" class="hero-btn">Explore</a>
+  <!-- LATEST DROPS -->
+  <section id="latest-drops">
+    <h2>Latest Drops</h2>
+
+    <div id="feed" class="feed-grid">
+      <!-- Cards will be injected here by JavaScript -->
     </div>
   </section>
 
+  <!-- FEATURED VIDEO -->
+  <section id="featured-video">
+    <h2>Featured Video</h2>
+
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+        title="Featured video"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- CTA / FOOTER -->
+  <footer>
+    <div class="cta-buttons">
+      <a href="blog/index.html" class="btn">Read the Blog</a>
+      <a href="videos/index.html" class="btn">Watch Videos</a>
+      <a href="contact.html" class="btn">Contact</a>
+    </div>
+
+    <p class="copyright">
+      © 2025 Anissa’s Corner of the Internet
+    </p>
+  </footer>
+
+  <script src="feed.js"></script>
 </body>
 </html>
 
