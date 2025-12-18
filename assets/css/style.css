@@ -1,4 +1,55 @@
 /* =========================
+   SITE HEADER WRAPPER FIX
+========================= */
+#site-header-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#site-header {
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem 1.5rem 1.5rem;
+  display: block;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.site-branding {
+  text-align: center;
+}
+
+.site-branding h1 {
+  margin: 0 0 1rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #5b21b6; /* Deep plum */
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #111;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  color: #d4af37; /* Gold hover */
+}
+
+/* =========================
    GLOBAL STYLES
 ========================= */
 body {
