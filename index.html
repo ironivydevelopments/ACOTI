@@ -5,50 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anissa’s Corner of the Internet</title>
 
+  <!-- Link to assets folder -->
   <link rel="stylesheet" href="assets/styles.css">
-<link rel="stylesheet" href="home.css">
-  
 </head>
 <body>
-<div id="site-header-container">
-  <header id="site-header">
-    <div class="site-branding">
-      <h1>Anissa’s Corner of the Internet</h1>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="store.html">Corner Store</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
-</div>
 
-  <!-- HERO -->
-  <header id="hero">
+  <!-- SITE HEADER -->
+  <div id="site-header-container">
+    <header id="site-header">
+      <div class="site-branding">
+        <h1>Anissa’s Corner of the Internet</h1>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="store.html">Corner Store</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
     <h2>Anissa’s Corner of the Internet</h2>
     <p class="tagline">
       Thoughts, videos, ideas, and creative drops — all in one corner.
     </p>
-  </header>
+  </section>
 
-  <!-- LATEST DROPS -->
+  <!-- LATEST DROPS / FEED -->
   <section id="latest-drops">
     <h2>Latest Drops</h2>
-
     <div id="feed" class="feed-grid">
-      <!-- Cards will be injected here by JavaScript -->
+      <!-- Example cards; JS can inject more -->
+      <div class="card">Blog Post / Video 1</div>
+      <div class="card">Blog Post / Video 2</div>
+      <div class="card">Blog Post / Video 3</div>
     </div>
   </section>
 
   <!-- FEATURED VIDEO -->
   <section id="featured-video">
     <h2>Featured Video</h2>
-
     <div class="video-container">
       <iframe
         src="https://www.youtube.com/embed/VIDEO_ID_HERE"
@@ -62,22 +64,16 @@
   <!-- CTA / FOOTER -->
   <footer>
     <div class="cta-buttons">
-      <a href="blog/index.html" class="btn">Read the Blog</a>
-      <a href="videos/index.html" class="btn">Watch Videos</a>
+      <a href="blog.html" class="btn">Read the Blog</a>
+      <a href="videos.html" class="btn">Watch Videos</a>
       <a href="contact.html" class="btn">Contact</a>
     </div>
-
     <p class="copyright">
       © 2025 Anissa’s Corner of the Internet
     </p>
   </footer>
 
+  <!-- Feed JS -->
   <script src="feed.js"></script>
 </body>
 </html>
-<div id="site-header-container" style="display:flex; justify-content:center; text-align:center;">
-  <header id="site-header">
-    ...
-  </header>
-</div>
-
