@@ -1,1 +1,25 @@
+{
+  "posts": [
+    {
+      "type": "video",
+      "title": "Welcome to Anissa’s Corner",
+      "description": "A quick intro to what this space is about.",
+      "youtubeId": "VIDEO_ID_HERE",
+      "date": "2025-01-10"
+    },
+    {
+      "type": "blog",
+      "title": "My First Blog Post",
+      "description": "This is where I share my thoughts and ideas.",
+      "image": "assets/images/sample.jpg",
+      "date": "2025-01-08"
+    },
+    {
+      "type": "text",
+      "title": "A Quick Thought",
+      "description": "Some days you just need to pause and reflect.",
+      "date": "2025-01-06"
+    }
+  ]
+}
 
