@@ -1,55 +1,37 @@
-// feed.js
+fetch("content.json")
+  .then(response => response.json())
+  .then(data => {
+    const feed = document.getElementById("feed");
 
-// ===== Your content arrays =====
-const videos = [
-  { title: "My First Video", videoId: "VIDEO_ID_1" },
-  { title: "Another Video", videoId: "VIDEO_ID_2" },
-  { title: "Cool Tutorial", videoId: "VIDEO_ID_3" }
-];
+    // Sort newest first
+    data.posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-const blogPosts = [
-  { title: "Welcome to Anissa's Corner", link: "blog/post1.html" },
-  { title: "My Top 5 Inspirations", link: "blog/post2.html" },
-  { title: "Creative Drops Guide", link: "blog/post3.html" }
-];
+    data.posts.forEach(post => {
+      const card = document.createElement("div");
+      card.className = "card";
 
-// ===== Grab the feed container =====
-const feed = document.getElementById("feed");
+      let innerHTML = `<h3>${post.title}</h3><p>${post.description}</p>`;
 
-// ===== Helper functions =====
-function createVideoCard(video) {
-  const card = document.createElement("div");
-  card.className = "card";
-  card.innerHTML = `
-    <h3>${video.title}</h3>
-    <iframe 
-      src="https://www.youtube.com/embed/${video.videoId}" 
-      title="${video.title}" 
-      frameborder="0" 
-      allowfullscreen>
-    </iframe>
-  `;
-  return card;
-}
+      if (post.type === "video" && post.youtubeId) {
+        innerHTML += `
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/${post.youtubeId}"
+              frameborder="0"
+              allowfullscreen>
+            </iframe>
+          </div>
+        `;
+      }
 
-function createBlogCard(post) {
-  const card = document.createElement("div");
-  card.className = "card";
-  card.innerHTML = `
-    <h3>${post.title}</h3>
-    <a href="${post.link}" class="hero-btn">Read More</a>
-  `;
-  return card;
-}
+      if (post.type === "blog" && post.image) {
+        innerHTML += `<img src="${post.image}" alt="${post.title}" style="width:100%;border-radius:8px;margin-top:1rem;">`;
+      }
 
-// ===== Alternate the content =====
-let maxLength = Math.max(videos.length, blogPosts.length);
-
-for (let i = 0; i < maxLength; i++) {
-  if (i < videos.length) {
-    feed.appendChild(createVideoCard(videos[i]));
-  }
-  if (i < blogPosts.length) {
-    feed.appendChild(createBlogCard(blogPosts[i]));
-  }
-}
+      card.innerHTML = innerHTML;
+      feed.appendChild(card);
+    });
+  })
+  .catch(error => {
+    console.error("Error loading content:", error);
+  });
