@@ -21,21 +21,23 @@ a {
   width: 100%;
   display: flex;
   justify-content: center;
-  text-align: center;
-}
-
-#site-header {
-  max-width: 1200px;
-  width: 100%;
-  padding: 2rem 1.5rem 1.5rem;
-  display: block;
+  background-color: #fdfdfd; 
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* Branding / Title */
-.site-branding {
+#site-header {
+   max-width: 1200px;
+  width: 100%;
+  padding: 2rem 1.5rem;
   text-align: center;
-  margin-bottom: 1rem;
+  display: block;
+}
+
+.site-branding h1 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #5b21b6;
 }
 
 .site-branding h1 {
@@ -48,10 +50,10 @@ a {
 
 /* Navigation */
 .main-nav ul {
-  list-style: none;
+ list-style: none;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem; /* more spacing between items */
   padding: 0;
   margin: 0;
 }
@@ -63,15 +65,16 @@ a {
 
 .main-nav a {
   text-decoration: none;
-  font-size: 0.95rem;
-  color: #111;
-  text-transform: uppercase;
+  font-size: 1rem;
   font-weight: 600;
+  color: #111;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   transition: color 0.3s;
 }
 
 .main-nav a:hover {
-  color: #d4af37;
+ color: #d4af37;
 }
 
 /* =========================
