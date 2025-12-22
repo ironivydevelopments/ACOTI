@@ -67,37 +67,38 @@ a {
 /* =========================
    WELCOME SECTION
 ========================= */
-
 #welcome {
-  padding: 4rem 1.5rem 3rem;
+  padding: 4rem 2rem 3rem;
   background: #fdfdfd;
   color: #111;
 }
 
 .welcome-inner {
-  max-width: 1100px;
+  max-width: 1200px; /* wider so text fills the page */
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 3rem;
+  grid-template-columns: 1fr 1fr; /* equal width for text and video */
+  gap: 4rem; /* breathing space */
   align-items: center;
 }
 
 .welcome-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 3rem; /* bigger for visibility */
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
   color: #5b21b6; /* deep plum */
 }
 
 .welcome-text p {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
+  max-width: 600px; /* wider for readability */
   line-height: 1.6;
-  max-width: 520px;
+  color: #444;
 }
 
 .welcome-video {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
 }
 
@@ -109,10 +110,19 @@ a {
   border-radius: 8px;
 }
 
-/* Mobile */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .welcome-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* stack text/video on mobile */
+    gap: 2rem;
+  }
+
+  .welcome-text h2 {
+    font-size: 2rem;
+  }
+
+  .welcome-text p {
+    font-size: 1.1rem;
   }
 }
 
