@@ -9,6 +9,21 @@ body {
   background: #fafafa;
   color: #111;
 }
+/* =========================
+   SITE BRANDING / TITLE
+========================= */
+.site-branding {
+  text-align: center;       /* centers the h1 */
+  margin-bottom: 2rem;      /* space between title and welcome section */
+}
+
+.site-branding h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;          /* adjust as needed */
+  font-weight: 700;
+  color: #5b21b6;           /* deep plum */
+  margin: 0;
+}
 
 /* HERO */
 #hero {
