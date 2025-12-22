@@ -39,6 +39,18 @@ a {
   color: #5b21b6;
   margin: 0 0 1.75rem;
 }
+.site-branding {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.site-branding h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #5b21b6;
+  margin: 0;
+}
 
 /* Navigation */
 .main-nav ul {
@@ -67,11 +79,6 @@ a {
 /* =========================
    WELCOME SECTION
 ========================= */
-#welcome {
-  padding: 4rem 2rem 3rem;
-  background: #fdfdfd;
-  color: #111;
-}
 
 .welcome-inner {
   max-width: 1200px; /* wider so text fills the page */
@@ -239,10 +246,6 @@ footer .btn:hover {
   text-align: center;
 }
 
-.welcome-inner {
-  max-width: 720px;
-  margin: 0 auto;
-}
 
 .welcome-section h2 {
   font-family: 'Playfair Display', serif;
