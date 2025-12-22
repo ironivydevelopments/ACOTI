@@ -141,6 +141,11 @@ a {
   gap: 2rem;
   padding: 2rem 1rem;
 }
+@media (max-width: 768px) {
+  .feed-grid {
+    padding: 2rem 1rem;
+  }
+}
 
 .card {
   background: #fdfdfd;
@@ -192,32 +197,17 @@ footer .btn {
   transition: background-color 0.3s ease;
 }
 
-footer .btn:hover {
+footer .btn:focus {
   background-color: #e6c200;
   color: #fff;
 }
 
-/* =========================
-   WELCOME SECTION
-========================= */
-
-.welcome-section {
-  padding: 4rem 2rem 3rem;
-  text-align: center;
-}
-
-
-.welcome-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  color: #1a1a2e;
-}
-
-.welcome-section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #444;
+:root {
+  --brand-purple: #5b21b6;
+  --brand-gold: #ffd700;
+  --background-light: #fdfdfd;
+  --text-dark: #111;
+  --text-muted: #444;
 }
 
 
