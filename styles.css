@@ -1,8 +1,18 @@
 /* =========================
    GLOBAL STYLES
 ========================= */
+
+/* Root variables for easy theming */
+:root {
+  --brand-purple: #5b21b6;
+  --brand-gold: #ffd700;
+  --background-light: #fdfdfd;
+  --text-dark: #111;
+  --text-muted: #444;
+}
+
 body {
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Playfair Display', serif;
   background: #a78bfa; /* Muted Lavender */
   margin: 0;
   color: #f5f5f5;
@@ -18,12 +28,14 @@ a {
    SITE HEADER / NAVIGATION
 ========================= */
 
+/* Container for header if needed */
 .site-header {
   width: 100%;
   border-bottom: 1px solid #e5e5e5;
-  background: #fdfdfd;
+  background: var(--background-light);
 }
 
+/* Inner wrapper for centering */
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -31,28 +43,17 @@ a {
   text-align: center;
 }
 
-/* Site Title */
-.site-title {
+/* Site Branding / Title */
+.site-branding h1, .site-title {
   font-family: 'Playfair Display', serif;
   font-size: 2.75rem;
   font-weight: 700;
-  color: #5b21b6;
-  margin: 0 0 1.75rem;
-}
-.site-branding {
-  text-align: center;
-  margin-bottom: 1.5rem;
+  color: var(--brand-purple);
+  margin: 0 0 1.5rem;
+  text-align: center; /* Centers on the page */
 }
 
-.site-branding h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.75rem;
-  font-weight: 700;
-  color: #5b21b6;
-  margin: 0;
-}
-
-/* Navigation */
+/* Navigation Bar */
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -73,7 +74,7 @@ a {
 }
 
 .main-nav a:hover {
-  color: #d4af37;
+  color: var(--brand-gold);
 }
 
 /* =========================
@@ -81,26 +82,31 @@ a {
 ========================= */
 
 .welcome-inner {
-  max-width: 1200px; /* wider so text fills the page */
+  max-width: 1200px; /* Wider for full page layout */
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* equal width for text and video */
-  gap: 4rem; /* breathing space */
+  grid-template-columns: 1fr 1fr; /* Equal width for text/video */
+  gap: 4rem; /* Breathing space between columns */
   align-items: center;
+  justify-items: center; /* Centers content horizontally in each column */
+}
+
+.welcome-text {
+  text-align: left; /* Change to center if preferred */
 }
 
 .welcome-text h2 {
-  font-size: 3rem; /* bigger for visibility */
+  font-size: 3rem; /* Large title for impact */
   line-height: 1.2;
   margin-bottom: 1.5rem;
-  color: #5b21b6; /* deep plum */
+  color: var(--brand-purple);
 }
 
 .welcome-text p {
   font-size: 1.25rem;
-  max-width: 600px; /* wider for readability */
+  max-width: 600px; /* Wider for readability */
   line-height: 1.6;
-  color: #444;
+  color: var(--text-muted);
 }
 
 .welcome-video {
@@ -120,7 +126,7 @@ a {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .welcome-inner {
-    grid-template-columns: 1fr; /* stack text/video on mobile */
+    grid-template-columns: 1fr; /* Stack text/video */
     gap: 2rem;
   }
 
@@ -132,6 +138,50 @@ a {
     font-size: 1.1rem;
   }
 
+  .feed-grid {
+    padding: 2rem 1rem;
+  }
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+#hero {
+  background: linear-gradient(to right, #1a1a2e, #2e2e3a);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+#hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--brand-gold);
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #f5f5f5;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--brand-gold);
+  color: #1a1a2e;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-btn:hover {
+  background-color: #e6c200;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
 /* =========================
    LATEST DROPS / FEED
 ========================= */
@@ -141,17 +191,12 @@ a {
   gap: 2rem;
   padding: 2rem 1rem;
 }
-@media (max-width: 768px) {
-  .feed-grid {
-    padding: 2rem 1rem;
-  }
-}
 
 .card {
-  background: #fdfdfd;
+  background: var(--background-light);
   padding: 1rem;
   border-radius: 8px;
-  color: #111;
+  color: var(--text-dark);
 }
 
 /* =========================
@@ -181,7 +226,7 @@ a {
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  background-color: #5b21b6;
+  background-color: var(--brand-purple);
   color: #f5f5f5;
 }
 
@@ -189,7 +234,7 @@ footer .btn {
   display: inline-block;
   margin: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: #ffd700;
+  background-color: var(--brand-gold);
   color: #1a1a2e;
   border-radius: 6px;
   font-weight: bold;
@@ -197,17 +242,23 @@ footer .btn {
   transition: background-color 0.3s ease;
 }
 
-footer .btn:focus {
+footer .btn:focus,
+footer .btn:hover {
   background-color: #e6c200;
   color: #fff;
 }
 
-:root {
-  --brand-purple: #5b21b6;
-  --brand-gold: #ffd700;
-  --background-light: #fdfdfd;
-  --text-dark: #111;
-  --text-muted: #444;
-}
+/* =========================
+   FUTURE NOTES / EDITS
+========================= */
 
-
+/*
+1. Use CSS variables for all colors so they can be updated site-wide easily.
+2. Avoid duplicating welcome sections; merge if possible.
+3. Use .welcome-inner grid for other pages if layout is similar.
+4. Home-page specific styles go in home.css to avoid cluttering global styles.
+5. For responsive design, consider additional breakpoints for tablets (768px–1024px).
+6. When adding new sections (like Corner Store, Let's Connect), create their own classes and place in home.css.
+7. Always keep max-width on content sections for readability on large screens.
+8. Any color/theme changes should update variables first.
+*/
