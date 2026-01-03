@@ -133,6 +133,23 @@ body {
     font-size: 0.95rem;
   }
 }
+/* =========================
+   NAVIGATION REFINEMENT
+========================= */
+
+.main-nav {
+  margin-top: 0.5rem;
+}
+
+.main-nav ul {
+  gap: 3rem; /* more breathing room between links */
+}
+
+.main-nav a {
+  font-size: 1rem;          /* was 0.9rem → more readable */
+  padding: 0.75rem 0;       /* increases click area vertically */
+  font-weight: 600;
+}
 
 /* =========================
    FEED GRID
